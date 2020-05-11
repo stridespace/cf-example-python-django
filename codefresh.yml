@@ -8,7 +8,7 @@ steps:
     title: Cloning main repository...
     stage: prepare
     type: git-clone
-    repo: 'codefreshdemo/cf-example-python-django'
+    repo: 'stridespace/cf-example-python-django'
     revision: master
     git: github
   build_my_image:
@@ -24,4 +24,4 @@ steps:
      stage: test
      image: '${{build_my_image}}'
      commands:
-       - python -m unittest composeexample.utils     
+       - python -m unittest composeexample.utils
