@@ -19,3 +19,9 @@ steps:
        - pip install pytest
        - pytest composeexample/utils.py --junitxml="testresults.xml"
        - less testresults.xml
+  testspace:
+    title: Upload to testspace
+    stage: test
+    image: s2technologies/testspace-client:tagname
+    commands:
+      - testspace -v
