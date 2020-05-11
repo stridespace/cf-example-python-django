@@ -24,4 +24,4 @@ steps:
     image: s2technologies/testspace-client
     commands:
       - testspace config url open.stridespace.com
-      - testspace testresults.xml
+      - testspace testresults.xml?full
