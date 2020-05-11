@@ -16,4 +16,6 @@ steps:
      stage: test
      image: python:buster
      commands:
-       - python -m unittest composeexample.utils
+       - pip install pytest
+       - pytest composeexample\utils.py --junitxml="testresults.xml"
+       - less testresults.xml
