@@ -17,5 +17,5 @@ steps:
      image: python:buster
      commands:
        - pip install pytest
-       - pytest composeexample/utils.py --junitxml="testresults.xml"
+       - pytest composeexample/utils.py --junitxml="testresults.xml" --disable-warnings
        - less testresults.xml
