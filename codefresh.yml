@@ -23,4 +23,5 @@ steps:
     stage: test
     image: s2technologies/testspace-client
     commands:
-      - testspace -v
+      - testspace config url open.stridespace.com
+      - testspace testresults.xml
