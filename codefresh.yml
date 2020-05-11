@@ -22,6 +22,6 @@ steps:
   testspace:
     title: Upload to testspace
     stage: test
-    image: s2technologies/testspace-client:tagname
+    image: s2technologies/testspace-client
     commands:
       - testspace -v
