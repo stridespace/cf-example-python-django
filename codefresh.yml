@@ -21,7 +21,8 @@ steps:
   testspace:
     title: Upload to testspace
     stage: test
-    image: s2technologies/testspace-client
+    image: buildpack-deps:18.04-scm
     commands:
+      - curl -fsSL https://testspace-client.s3.amazonaws.com/testspace-linux.tgz | tar -zxvf- -C /usr/local/bin
       - testspace config url open.stridespace.com
       - testspace testresults.xml ?full
