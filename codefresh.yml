@@ -23,7 +23,6 @@ steps:
     stage: test
     image: buildpack-deps:18.04-scm
     commands:
-      - printenv
-      - curl -fsSL https://testspace-client.s3.amazonaws.com/testspace-linux.tgz | tar -zxvf- -C /usr/local/bin
+      - curl -fsSL https://testspace-client.s3.amazonaws.com/testspace-linux-dev.tgz | tar -zxvf- -C /usr/local/bin
       - testspace config url open.stridespace.com
       - testspace testresults.xml ?full
