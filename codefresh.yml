@@ -25,5 +25,5 @@ steps:
     commands:
       - curl -fsSL https://testspace-client.s3.amazonaws.com/testspace-linux-dev.tgz | tar -zxvf- -C /usr/local/bin
       - testspace config url open.stridespace.com
-      - curl -H "Authrization: $CF_API_KEY" $CF_URL/api/builds/$CF_BUILD_ID?noAccount=$CF_ACCOUNT
+      - curl -H "Authorization: $CF_API_KEY" "$CF_URL/api/builds/$CF_BUILD_ID?noAccount=$CF_ACCOUNT"
       - testspace testresults.xml
