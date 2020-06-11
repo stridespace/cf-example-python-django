@@ -31,4 +31,4 @@ steps:
     when:
       condition:
         all:
-          always: true
+          always: "true"
