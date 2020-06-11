@@ -28,3 +28,7 @@ steps:
       - >-
         curl -H "Authorization: $CF_API_KEY" $CF_URL/api/builds/$CF_BUILD_ID
       - testspace testresults.xml
+    when:
+      condition:
+        all:
+          always: true
